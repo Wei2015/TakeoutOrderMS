@@ -28,12 +28,16 @@
         android:orientation="vertical">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="?attr/colorButtonNormal"
+            android:shadowColor="@color/colorAccent"
             android:text="@string/Admin"
+            android:textAlignment="textStart"
             android:textColor="@android:color/black"
             android:textSize="16sp"
-            android:layout_marginBottom="16dp"/>
+            android:textStyle="bold|italic" />
 
         <EditText
             android:id="@+id/username"
@@ -52,17 +56,22 @@
             android:layout_marginBottom="40dp"/>
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="?attr/colorButtonNormal"
+            android:shadowColor="@color/colorAccent"
             android:text="@string/Customer"
+            android:textAlignment="textStart"
             android:textColor="@android:color/black"
+            android:textColorLink="@color/colorPrimary"
             android:textSize="16sp"
-            android:layout_marginBottom="16dp"/>
+            android:textStyle="bold|italic" />
 
 
         <com.google.android.gms.common.SignInButton
             android:id="@+id/sign_in_google_button"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="20dp"
@@ -70,7 +79,7 @@
 
         <com.facebook.login.widget.LoginButton
             android:id="@+id/sign_in_fb_button"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="30dp" />

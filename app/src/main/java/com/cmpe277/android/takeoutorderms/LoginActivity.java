@@ -48,9 +48,6 @@ public class LoginActivity extends AppCompatActivity implements OnClickListener{
     private GoogleSignInClient mGoogleSignInClient;
 
 
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -72,7 +69,6 @@ public class LoginActivity extends AppCompatActivity implements OnClickListener{
         // Set the dimensions of the sign-in button.
         SignInButton signInButton = findViewById(R.id.sign_in_google_button);
         signInButton.setSize(SignInButton.SIZE_WIDE);
-        signInButton.setColorScheme(SignInButton.COLOR_AUTO);
         signInButton.setOnClickListener(this);
 
         /**
@@ -85,7 +81,7 @@ public class LoginActivity extends AppCompatActivity implements OnClickListener{
             @Override
             public void onSuccess(LoginResult loginResult) {
                 Log.d(TAG, "facebook:onSuccess:" + loginResult);
-                handleFacebookAccessToken(loginResult.getAccessToken());
+                //handleFacebookAccessToken(loginResult.getAccessToken());
             }
 
             @Override
@@ -129,27 +125,40 @@ public class LoginActivity extends AppCompatActivity implements OnClickListener{
                 String name = profile.getDisplayName();
                 String email = profile.getEmail();
 
+                Log.d(TAG, "email is " + email);
+                Log.d(TAG, "name is " + name);
+
             }
 
-            //send user verification email
-            user.sendEmailVerification()
-                    .addOnCompleteListener(new OnCompleteListener<Void>() {
-                        @Override
-                        public void onComplete(@NonNull Task<Void> task) {
-                            if (task.isSuccessful()) {
-                                Log.d(TAG, "Email sent.");
-                            }
-                        }
-                    });
+//            //send user verification email
+//            user.sendEmailVerification()
+//                    .addOnCompleteListener(new OnCompleteListener<Void>() {
+//                        @Override
+//                        public void onComplete(@NonNull Task<Void> task) {
+//                            if (task.isSuccessful()) {
+//                                Log.d(TAG, "Email sent.");
+//                            }
+//                        }
+//                    });
+
+            //go to next view of new activity
+
+            startActivity(new Intent(LoginActivity.this, MainCustomerActivity.class));
         }
 
 
+    }
+
+    private void signIn() {
+        Intent signInIntent = mGoogleSignInClient.getSignInIntent();
+        startActivityForResult(signInIntent, RC_SIGN_IN);
     }
 
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
+
         // Result returned from launching the Intent from GoogleSignInApi.getSignInIntent(...);
         if (requestCode == RC_SIGN_IN) {
             Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
@@ -165,10 +174,10 @@ public class LoginActivity extends AppCompatActivity implements OnClickListener{
         }
     }
 
-    private void firebaseAuthWithGoogle(GoogleSignInAccount acct) {
-        Log.d(TAG, "firebaseAuthWithGoogle:" + acct.getId());
+    private void firebaseAuthWithGoogle(GoogleSignInAccount account) {
+        Log.d(TAG, "firebaseAuthWithGoogle:" + account.getId());
 
-        AuthCredential credential = GoogleAuthProvider.getCredential(acct.getIdToken(), null);
+        AuthCredential credential = GoogleAuthProvider.getCredential(account.getIdToken(), null);
         mAuth.signInWithCredential(credential)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
@@ -177,12 +186,12 @@ public class LoginActivity extends AppCompatActivity implements OnClickListener{
                             // Sign in success, update UI with the signed-in user's information
                             Log.d(TAG, "signInWithCredential:success");
                             FirebaseUser user = mAuth.getCurrentUser();
-                            updateUI(user);
+                            //updateUI(user);
                         } else {
                             // If sign in fails, display a message to the user.
                             Log.w(TAG, "signInWithCredential:failure", task.getException());
                             Snackbar.make(findViewById(R.id.google_sign_in), "Authentication Failed.", Snackbar.LENGTH_SHORT).show();
-                            updateUI(null);
+                            //updateUI(null);
                         }
 
                         // ...
@@ -199,11 +208,6 @@ public class LoginActivity extends AppCompatActivity implements OnClickListener{
                 signIn();
                 break;
         }
-    }
-
-    private void signIn() {
-        Intent signInIntent = mGoogleSignInClient.getSignInIntent();
-        startActivityForResult(signInIntent, RC_SIGN_IN);
     }
 
 

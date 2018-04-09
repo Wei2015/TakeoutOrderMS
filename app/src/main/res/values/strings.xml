@@ -2,14 +2,14 @@
     <string name="app_name">TakeOut Order MS</string>
     <string name="welcome">Welcome to Your Favorite Order System</string>
 
-    <string name="Admin">Admin: login with your password:</string>
+    <string name="Admin">Admin: login here</string>
     <string name="username">Username</string>
     <string name="password">Password</string>
-    <string name="Customer">Customer: login with Google or Facebook account</string>
+    <string name="Customer">Customer: login with Google or Facebook</string>
 
     <string name="facebook_app_id">441163453008587</string>
     <string name="fb_login_protocol_scheme">fb441163453008587</string>
 
-    <string name= "google_login_web_client_id">198054132933-b1tjeb5aftgj27ihblsh5tme0uadah09.apps.googleusercontent.com</string>
+    <string name="google_login_web_client_id">198054132933-b1tjeb5aftgj27ihblsh5tme0uadah09.apps.googleusercontent.com</string>
 
 </resources>
