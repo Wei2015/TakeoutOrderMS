@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "198054132933",
+    "firebase_url": "https://takeoutorderms.firebaseio.com",
+    "project_id": "takeoutorderms",
+    "storage_bucket": "takeoutorderms.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:198054132933:android:4a3af291a66839dc",
+        "android_client_info": {
+          "package_name": "com.cmpe277.android.takeoutorderms"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "198054132933-efu6cuujtvt11t05kbpqhrb5o7rqm16s.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.cmpe277.android.takeoutorderms",
+            "certificate_hash": "13cc816fc6e9adf3caaf36da4eba207a7658a34a"
+          }
+        },
+        {
+          "client_id": "198054132933-b1tjeb5aftgj27ihblsh5tme0uadah09.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAVTbwwcSEjn-TGNY7MVQtjhBx9bDR2XxM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "198054132933-b1tjeb5aftgj27ihblsh5tme0uadah09.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
