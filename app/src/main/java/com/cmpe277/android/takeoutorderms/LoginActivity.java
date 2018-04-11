@@ -66,6 +66,9 @@ public class LoginActivity extends AppCompatActivity implements OnClickListener{
                 .build();
         // Build a GoogleSignInClient with the options specified by gso.
         mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
+
+        //initiate App setClient
+        App.getInstance().setmGoogleApiClient(mGoogleSignInClient);
         // Set the dimensions of the sign-in button.
         SignInButton signInButton = findViewById(R.id.sign_in_google_button);
         signInButton.setSize(SignInButton.SIZE_WIDE);
@@ -141,9 +144,8 @@ public class LoginActivity extends AppCompatActivity implements OnClickListener{
 //                        }
 //                    });
 
-            //go to next view of new activity
 
-            startActivity(new Intent(LoginActivity.this, MainCustomerActivity.class));
+
         }
 
 
@@ -186,6 +188,7 @@ public class LoginActivity extends AppCompatActivity implements OnClickListener{
                             // Sign in success, update UI with the signed-in user's information
                             Log.d(TAG, "signInWithCredential:success");
                             FirebaseUser user = mAuth.getCurrentUser();
+                            startActivity(new Intent(LoginActivity.this, MainCustomerActivity.class));
                             //updateUI(user);
                         } else {
                             // If sign in fails, display a message to the user.

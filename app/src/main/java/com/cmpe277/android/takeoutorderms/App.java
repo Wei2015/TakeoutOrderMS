@@ -3,34 +3,34 @@ package com.cmpe277.android.takeoutorderms;
 
 import android.app.Application;
 
+import com.google.android.gms.auth.api.signin.GoogleSignInClient;
+
 /**
- * Created by weiyao on 4/11/18.
+ * This class make GoogleSignInClient global access in my app.
  */
 
 public class App extends Application {
 
 
-        private GoogleApiHelper googleApiHelper;
-        private static App mInstance;
+    private static App mInstance;
+    private GoogleSignInClient mGoogleApiClient;
 
-        @Override
-        public void onCreate() {
-            super.onCreate();
+    public static synchronized App getInstance() {
+        return mInstance;
+    }
 
-            mInstance = this;
-            googleApiHelper = new GoogleApiHelper(mInstance);
-        }
+    @Override
+    public void onCreate() {
+        super.onCreate();
 
-        public static synchronized App getInstance() {
-            return mInstance;
-        }
+        mInstance = this;
+    }
 
-        public GoogleApiHelper getGoogleApiHelperInstance() {
-            return this.googleApiHelper;
-        }
-        public static GoogleApiHelper getGoogleApiHelper() {
-            return getInstance().getGoogleApiHelperInstance();
-        }
+    public GoogleSignInClient getmGoogleApiClient() {
+        return mGoogleApiClient;
+    }
 
-
+    public void setmGoogleApiClient(GoogleSignInClient mGoogleApiClient) {
+        this.mGoogleApiClient = mGoogleApiClient;
+    }
 }
