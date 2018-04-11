@@ -19,4 +19,10 @@
     <string name="signOut">Signout</string>
     <string name="cart">Cart</string>
 
+    <string name="category">Menu Categories</string>
+    <string name="appetizer">Appetizers</string>
+    <string name="main">Main Courses</string>
+    <string name="drink">Drinks</string>
+    <string name="dessert">Desserts</string>
+
 </resources>

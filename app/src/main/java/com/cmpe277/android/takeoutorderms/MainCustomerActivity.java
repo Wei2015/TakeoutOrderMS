@@ -97,7 +97,7 @@ public class MainCustomerActivity extends AppCompatActivity {
                 @Override
                 public void onComplete(@NonNull Task<Void> task) {
                     Toast.makeText(getApplicationContext(), "You are signed out from Google Account", Toast.LENGTH_SHORT).show();
-                    //remove Goolge signin client from app class
+                    //remove Google sign in client from app class
                     App.getInstance().setmGoogleApiClient(null);
                     //return to login activity
                     startActivity(new Intent(MainCustomerActivity.this, LoginActivity.class));
