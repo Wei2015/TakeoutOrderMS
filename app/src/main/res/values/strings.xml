@@ -12,4 +12,11 @@
 
     <string name="google_login_web_client_id">198054132933-b1tjeb5aftgj27ihblsh5tme0uadah09.apps.googleusercontent.com</string>
 
+
+    //customer view
+    <string name="myAccount">My Account</string>
+    <string name="myOrder">My Order</string>
+    <string name="signOut">Signout</string>
+    <string name="cart">Cart</string>
+
 </resources>
