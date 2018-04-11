@@ -10,6 +10,7 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
@@ -88,6 +89,15 @@ public class MainCustomerActivity extends AppCompatActivity {
                 break;
 
             case R.id.sign_out:
+                if(App.getGoogleApiHelper().isConnected())
+                {
+                    //Get google api client from anywhere
+                    GoogleApiClient mGoogleApiClient = App.getGoogleApiHelper().getGoogleApiClient();
+                    Auth.GoogleSignInApi.signOut(mGoogleApiClient);
+                    mGoogleApiClient.disconnect();
+                    Log.d("signout", "signout here");
+                   // mGoogleApiClient.connect();
+                }
 
 
                 break;
