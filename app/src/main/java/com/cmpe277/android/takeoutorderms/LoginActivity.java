@@ -182,21 +182,26 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     private void onAuthSuccess(FirebaseUser user){
 
 
+            if (user != null) {
 
-            // UID specific to the provider
-            String uid = user.getUid();
 
-            // Name, email address, and profile photo Url
-            String name = user.getDisplayName();
-            String email = user.getEmail();
 
-            //Write new user into database
-            User newUser = new User(name, email);
-            mDatabase.child("users").child(uid).setValue(newUser);
 
-            //send user a welcome email
+                // UID specific to the provider
+                String uid = user.getUid();
 
-        startActivity(new Intent(LoginActivity.this, MainCustomerActivity.class));
+                // Name, email address, and profile photo Url
+                String name = user.getDisplayName();
+                String email = user.getEmail();
+
+                //Write new user into database
+                User newUser = new User(name, email);
+                mDatabase.child("users").child(uid).setValue(newUser);
+
+                //send user a welcome email
+
+                startActivity(new Intent(LoginActivity.this, MainCustomerActivity.class));
+            }
 
     }
 

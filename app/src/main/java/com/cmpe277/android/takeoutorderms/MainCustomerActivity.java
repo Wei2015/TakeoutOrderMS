@@ -16,18 +16,22 @@ import android.widget.Toast;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class MainCustomerActivity extends AppCompatActivity {
 
     private DrawerLayout mDrawerLayout;
     //private Toolbar toolbar;
     private NavigationView navigationView;
+    private FirebaseAuth mAuth;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_customer);
+
+        mAuth = FirebaseAuth.getInstance();
 
         //set up navi bar
         mDrawerLayout = findViewById(R.id.drawer_layout);
@@ -83,16 +87,19 @@ public class MainCustomerActivity extends AppCompatActivity {
                 break;
 
             case R.id.sign_out:
-                final GoogleSignInClient client = App.getInstance().getmGoogleSignInClient();
+
+                GoogleSignInClient client = App.getInstance().getmGoogleSignInClient();
                 client.signOut().addOnCompleteListener(this, new OnCompleteListener<Void>() {
                 @Override
                 public void onComplete(@NonNull Task<Void> task) {
                     Toast.makeText(getApplicationContext(), "You are signed out from Google Account", Toast.LENGTH_SHORT).show();
-                    client.revokeAccess();
-                    //return to login activity
-                    startActivity(new Intent(MainCustomerActivity.this, LoginActivity.class));
                 }
             });
+                client.revokeAccess();
+                FirebaseAuth.getInstance().signOut();
+                //return to login activity
+                startActivity(new Intent(MainCustomerActivity.this, LoginActivity.class));
+                finish();
                 break;
 
             case android.R.id.home:
