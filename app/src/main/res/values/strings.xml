@@ -2,10 +2,10 @@
     <string name="app_name">TakeOut</string>
     <string name="welcome">Welcome to TakeOut Order System</string>
 
-    <string name="Admin">Admin: login here</string>
+    <string name="Admin">Admin Login: </string>
     <string name="username">Username</string>
     <string name="password">Password</string>
-    <string name="Customer">Customer: login here</string>
+    <string name="Customer">Customer Login: </string>
 
     <string name="facebook_app_id">441163453008587</string>
     <string name="fb_login_protocol_scheme">fb441163453008587</string>

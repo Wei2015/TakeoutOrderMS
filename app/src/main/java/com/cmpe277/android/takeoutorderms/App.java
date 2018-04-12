@@ -26,11 +26,11 @@ public class App extends Application {
         mInstance = this;
     }
 
-    public GoogleSignInClient getmGoogleApiClient() {
+    public GoogleSignInClient getmGoogleSignInClient() {
         return mGoogleApiClient;
     }
 
-    public void setmGoogleApiClient(GoogleSignInClient mGoogleApiClient) {
+    public void setmGoogleSignInClient(GoogleSignInClient mGoogleApiClient) {
         this.mGoogleApiClient = mGoogleApiClient;
     }
 }

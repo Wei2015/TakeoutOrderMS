@@ -3,14 +3,15 @@ package com.cmpe277.android.takeoutorderms;
 
 import android.content.Intent;
 import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.view.View.OnClickListener;
+import android.widget.EditText;
+import android.widget.Toast;
 
+import com.cmpe277.android.takeoutorderms.model.User;
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
 import com.facebook.FacebookException;
@@ -30,16 +31,22 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
 import com.google.firebase.auth.UserInfo;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 
 /**
  * A login screen that offers login via email/password.
  */
-public class LoginActivity extends AppCompatActivity implements OnClickListener{
+public class LoginActivity extends AppCompatActivity implements View.OnClickListener{
+
+    private EditText username;
+    private EditText password;
 
     private static final String TAG = "LoginActivity";
 
     private FirebaseAuth mAuth;
+    private DatabaseReference mDatabase;
 
     /**
      * For Google Login
@@ -53,7 +60,11 @@ public class LoginActivity extends AppCompatActivity implements OnClickListener{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+        username = (EditText)findViewById(R.id.username);
+        password = (EditText)findViewById(R.id.password);
+
         mAuth = FirebaseAuth.getInstance();
+        mDatabase = FirebaseDatabase.getInstance().getReference();
 
         /**
          * Google Sign-in Initiation
@@ -68,7 +79,7 @@ public class LoginActivity extends AppCompatActivity implements OnClickListener{
         mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
 
         //initiate App setClient
-        App.getInstance().setmGoogleApiClient(mGoogleSignInClient);
+        App.getInstance().setmGoogleSignInClient(mGoogleSignInClient);
         // Set the dimensions of the sign-in button.
         SignInButton signInButton = findViewById(R.id.sign_in_google_button);
         signInButton.setSize(SignInButton.SIZE_WIDE);
@@ -108,48 +119,12 @@ public class LoginActivity extends AppCompatActivity implements OnClickListener{
         super.onStart();
         // Check if user is signed in (non-null) and update UI accordingly.
         FirebaseUser currentUser = mAuth.getCurrentUser();
-        updateUI(currentUser);
+        onAuthSuccess(currentUser);
 
     }
 
 
-    private void updateUI(@Nullable FirebaseUser user) {
-        if (user != null) {
 
-            //obtain user info
-            for (UserInfo profile : user.getProviderData()) {
-                // Id of the provider (ex: google.com)
-                String providerId = profile.getProviderId();
-
-                // UID specific to the provider
-                String uid = profile.getUid();
-
-                // Name, email address, and profile photo Url
-                String name = profile.getDisplayName();
-                String email = profile.getEmail();
-
-                Log.d(TAG, "email is " + email);
-                Log.d(TAG, "name is " + name);
-
-            }
-
-//            //send user verification email
-//            user.sendEmailVerification()
-//                    .addOnCompleteListener(new OnCompleteListener<Void>() {
-//                        @Override
-//                        public void onComplete(@NonNull Task<Void> task) {
-//                            if (task.isSuccessful()) {
-//                                Log.d(TAG, "Email sent.");
-//                            }
-//                        }
-//                    });
-
-
-
-        }
-
-
-    }
 
     private void signIn() {
         Intent signInIntent = mGoogleSignInClient.getSignInIntent();
@@ -187,21 +162,57 @@ public class LoginActivity extends AppCompatActivity implements OnClickListener{
                         if (task.isSuccessful()) {
                             // Sign in success, update UI with the signed-in user's information
                             Log.d(TAG, "signInWithCredential:success");
-                            FirebaseUser user = mAuth.getCurrentUser();
-                            startActivity(new Intent(LoginActivity.this, MainCustomerActivity.class));
-                            //updateUI(user);
+                            //FirebaseUser user = mAuth.getCurrentUser();
+                            FirebaseUser user = task.getResult().getUser();
+                            onAuthSuccess(user);
+
+
                         } else {
                             // If sign in fails, display a message to the user.
                             Log.w(TAG, "signInWithCredential:failure", task.getException());
                             Snackbar.make(findViewById(R.id.google_sign_in), "Authentication Failed.", Snackbar.LENGTH_SHORT).show();
-                            //updateUI(null);
+
                         }
 
-                        // ...
                     }
                 });
     }
 
+
+    private void onAuthSuccess(FirebaseUser user){
+
+
+
+            // UID specific to the provider
+            String uid = user.getUid();
+
+            // Name, email address, and profile photo Url
+            String name = user.getDisplayName();
+            String email = user.getEmail();
+
+            //Write new user into database
+            User newUser = new User(name, email);
+            mDatabase.child("users").child(uid).setValue(newUser);
+
+            //send user a welcome email
+
+        startActivity(new Intent(LoginActivity.this, MainCustomerActivity.class));
+
+    }
+
+
+
+
+    //onclick method for Admin login
+    public void adminLogin() {
+
+        if (username.getText().toString().equals("Admin") && password.getText().toString().equals("Admin")) {
+            startActivity(new Intent(LoginActivity.this, MainAdminActivity.class));
+        } else {
+            Log.d("AdminLog", username.getText().toString());
+            Toast.makeText(getApplicationContext(), "Admin Login failed", Toast.LENGTH_SHORT).show();
+        }
+    }
 
 
     @Override
@@ -210,9 +221,11 @@ public class LoginActivity extends AppCompatActivity implements OnClickListener{
             case R.id.sign_in_google_button:
                 signIn();
                 break;
+
+            case R.id.login:
+                adminLogin();
+                break;
         }
     }
-
-
 }
 

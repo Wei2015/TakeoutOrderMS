@@ -1,35 +1,26 @@
 package com.cmpe277.android.takeoutorderms;
 
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.TextView;
+import android.view.View;
 import android.widget.Toast;
 
-import com.google.android.gms.auth.api.Auth;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
-import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
-import com.google.android.gms.common.api.GoogleApiClient;
-import com.google.android.gms.common.api.ResultCallback;
-import com.google.android.gms.common.api.Status;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 
 public class MainCustomerActivity extends AppCompatActivity {
 
     private DrawerLayout mDrawerLayout;
-    private Toolbar toolbar;
+    //private Toolbar toolbar;
     private NavigationView navigationView;
 
 
@@ -44,7 +35,7 @@ public class MainCustomerActivity extends AppCompatActivity {
         setupDrawerContent(navigationView);
 
         //set up toolbar
-        toolbar = findViewById(R.id.toolbar);
+        //toolbar = findViewById(R.id.toolbar);
         ActionBar actionbar = getSupportActionBar();
         actionbar.setDisplayHomeAsUpEnabled(true);
         actionbar.setHomeAsUpIndicator(R.drawable.ic_menu);
@@ -92,19 +83,16 @@ public class MainCustomerActivity extends AppCompatActivity {
                 break;
 
             case R.id.sign_out:
-                GoogleSignInClient client = App.getInstance().getmGoogleApiClient();
+                final GoogleSignInClient client = App.getInstance().getmGoogleSignInClient();
                 client.signOut().addOnCompleteListener(this, new OnCompleteListener<Void>() {
                 @Override
                 public void onComplete(@NonNull Task<Void> task) {
                     Toast.makeText(getApplicationContext(), "You are signed out from Google Account", Toast.LENGTH_SHORT).show();
-                    //remove Google sign in client from app class
-                    App.getInstance().setmGoogleApiClient(null);
+                    client.revokeAccess();
                     //return to login activity
                     startActivity(new Intent(MainCustomerActivity.this, LoginActivity.class));
                 }
             });
-
-
                 break;
 
             case android.R.id.home:
@@ -112,5 +100,9 @@ public class MainCustomerActivity extends AppCompatActivity {
                 break;
         }
         return true;
+    }
+
+    public void showItemList(View view){
+
     }
 }
