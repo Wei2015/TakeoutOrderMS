@@ -2,8 +2,8 @@
     <string name="app_name">TakeOut</string>
     <string name="welcome">Welcome to TakeOut Order System</string>
 
-    <string name="Admin">Admin Login: </string>
-    <string name="username">Username</string>
+    <string name="Admin">Admin Login</string>
+    <string name="username">Admin Username</string>
     <string name="password">Password</string>
     <string name="Customer">Customer Login: </string>
 

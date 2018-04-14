@@ -15,6 +15,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="40dp"
+        android:elevation="@dimen/com_facebook_likeboxcountview_border_width"
         android:fontFamily="sans-serif-condensed"
         android:text="@string/welcome"
         android:textAlignment="center"
@@ -29,46 +30,36 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:background="?attr/colorButtonNormal"
-            android:shadowColor="@color/colorAccent"
-            android:text="@string/Admin"
-            android:textAlignment="textStart"
-            android:textColor="@color/title"
-            android:textSize="16sp"
-            android:textStyle="bold|italic" />
 
         <EditText
             android:id="@+id/username"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="text"
+            android:layout_marginBottom="16dp"
             android:hint="@string/username"
-            android:layout_marginBottom="16dp"/>
+            android:inputType="text"
+            android:textColor="@color/common_google_signin_btn_text_dark_focused" />
 
         <EditText
             android:id="@+id/password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textVisiblePassword"
+            android:layout_marginBottom="20dp"
             android:hint="@string/password"
-            android:layout_marginBottom="20dp"/>
+            android:inputType="textVisiblePassword"
+            android:textColor="@color/common_google_signin_btn_text_dark_focused" />
 
         <Button
             android:id="@+id/login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="40dp"
-            android:text="Login" />
+            android:text="@string/Admin" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
-            android:background="?attr/colorButtonNormal"
             android:shadowColor="@color/colorAccent"
             android:text="@string/Customer"
             android:textAlignment="textStart"
@@ -84,7 +75,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="20dp"
-            android:layout_marginBottom="20dp"/>
+            android:layout_marginBottom="50dp"/>
 
         <com.facebook.login.widget.LoginButton
             android:id="@+id/sign_in_fb_button"
