@@ -1,0 +1,69 @@
+<resources>
+    <string name="app_name">TakeOut</string>
+    <string name="welcome">Welcome to TakeOut Order System</string>
+
+    //Log In
+    <string name="Admin">Admin Login</string>
+    <string name="username">Admin Username</string>
+    <string name="password">Password</string>
+    <string name="Customer">Customer Login: </string>
+
+    <string name="facebook_app_id">441163453008587</string>
+    <string name="fb_login_protocol_scheme">fb441163453008587</string>
+
+    <string name="google_login_web_client_id">198054132933-b1tjeb5aftgj27ihblsh5tme0uadah09.apps.googleusercontent.com</string>
+
+
+    //customer view
+    <string name="myAccount">My Account</string>
+    <string name="myOrder">My Order</string>
+    <string name="signOut">Signout</string>
+    <string name="cart">Shopping Cart</string>
+
+    <string name="category">Menu Category</string>
+    <string name="appetizer">Appetizers</string>
+    <string name="main">Main Courses</string>
+    <string name="drink">Drinks</string>
+    <string name="dessert">Desserts</string>
+    <string name="list">Item List</string>
+
+    <string name="sort">Sort</string>
+    <string name="sortByName">By Name</string>
+    <string name="sortByPrice">By Price</string>
+    <string name="sortByPopularity">By Popularity</string>
+
+    <string name="selectDate">Select Date</string>
+    <string name="selectTime">Select Time</string>
+
+
+    <string name="addToOrder">Add to Cart</string>
+    <string name="order">Order</string>
+    <string name="accountTitle">Account Information</string>
+    <string name="orderTitle">Order Information</string>
+    <string name="userName">User Name:  </string>
+    <string name="email">Login Email:  </string>
+
+    <string name="updateInfo">Update Profile</string>
+    <string name="back">Back</string>
+
+
+    //admin view
+    <string name="AddItem">Add New Item</string>
+    <string name="uploadPhoto">Take Photo with Camera</string>
+    <string name="reset">Reset</string>
+    <string name="submit">Submit</string>
+    <string name="categorySelection">Menu Category</string>
+
+    <string name="orderList">Order Report</string>
+
+    <string name="error_message_item_name">Enter Item Name</string>
+    <string name="error_message_price">Enter Valid Price</string>
+    <string name="error_message_calories">Enter Valid Calories</string>
+    <string name="error_message_time">Enter Valid Preparation Time in Minutes less than 100</string>
+    <string name="error_message_radioButton">Please select one category</string>
+    <string name="success_message">Input are successfully validated.</string>
+    <string name="delete">Remove</string>
+    <string name="title_activity_cart">CartActivity</string>
+
+
+</resources>

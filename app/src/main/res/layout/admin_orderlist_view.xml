@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login"
+    android:orientation="vertical">
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:fontFamily="serif"
+        android:text="@string/orderList"
+        android:textColor="@android:color/black"
+        android:textSize="30sp"
+        android:textStyle="bold|italic"
+        android:layout_marginTop="20dp" />
+
+    <Button
+        android:id="@+id/reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginRight="20dp"
+        android:text="Reset" />
+
+
+    <ListView
+        android:id="@+id/order_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@null"
+        android:layout_margin="20dp"
+        android:dividerHeight="5dp"/>
+
+
+
+</LinearLayout>

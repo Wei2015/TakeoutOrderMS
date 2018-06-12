@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/lilac2"
+    tools:context=".AccountActivity"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/AppTheme.NoActionBar"
+        app:navigationIcon="@drawable/ic_arrow_back_black_24dp"
+        app:title="@string/app_name"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:orientation="horizontal">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/accountTitle"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:textColor="@android:color/black"
+        android:layout_centerInParent="true"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/userName"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"/>
+
+        <EditText
+            android:id="@+id/user_name"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:textStyle="italic" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/email"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"/>
+
+        <EditText
+            android:id="@+id/user_email"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

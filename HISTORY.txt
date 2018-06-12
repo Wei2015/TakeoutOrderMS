@@ -1,0 +1,483 @@
+commit 365c417b1cd27ae84369533e5c919dc31b29e403
+Author: Wei2015 <wei.yao@sjsu.edu>
+Date:   Sat May 19 22:50:26 2018 -0700
+
+    add navigation button on some activities
+
+commit 99f5b08834ef051d0a7f5bc17f018b493b68a791
+Author: Wei2015 <wei.yao@sjsu.edu>
+Date:   Sat May 19 20:34:18 2018 -0700
+
+    update UI
+
+commit 73259afba2c99ff3db9d1f8496e2d678c5fce737
+Author: Wei2015 <wei.yao@sjsu.edu>
+Date:   Fri May 18 23:41:20 2018 -0700
+
+    add function of FB login
+
+commit ca8ab0b98242866eecdcda2e0c71ce7a1aeb3ce1
+Author: Wei2015 <wei.yao@sjsu.edu>
+Date:   Fri May 18 16:44:39 2018 -0700
+
+    add admin reset button functionality
+
+commit bfc60a9a6a0c84ed0a4f1aa83552ce3bcbe27985
+Author: Wei2015 <wei.yao@sjsu.edu>
+Date:   Fri May 18 15:03:09 2018 -0700
+
+    add check order status for cancel button
+
+commit f581c6aa658f97a2276a479d3642eb0b8decc29c
+Author: Wei2015 <wei.yao@sjsu.edu>
+Date:   Fri May 18 14:58:27 2018 -0700
+
+    update customer order status in listview
+
+commit 72ba849670852f7fac3ce7c01025ee537523268c
+Author: Wei2015 <wei.yao@sjsu.edu>
+Date:   Fri May 18 12:34:30 2018 -0700
+
+    update item popularity after order successfully placed
+
+commit c8c6fc9bc2b012fcde2d7028a338e4bc0d084e3c
+Author: Wei2015 <wei.yao@sjsu.edu>
+Date:   Fri May 18 00:13:54 2018 -0700
+
+    fix remove cart item
+
+commit 5a163f05ddf469d2b9bd5b101394480b43c78f18
+Author: Wei2015 <wei.yao@sjsu.edu>
+Date:   Tue May 15 17:18:21 2018 -0700
+
+    add order report tab in admin
+
+commit b4f383f201de859945ae2b534644089e801245aa
+Author: Wei2015 <wei.yao@sjsu.edu>
+Date:   Mon May 14 00:44:50 2018 -0700
+
+    remove OrderService class
+
+commit a34364b85964c456e9f0f9655bbd9c6f949a5f26
+Author: Wei2015 <wei.yao@sjsu.edu>
+Date:   Mon May 14 00:43:19 2018 -0700
+
+    add order implemented, can add new order successfully
+
+commit 7cf1e980d24165f50f9161627764a456f917fb9e
+Author: Wei2015 <wei.yao@sjsu.edu>
+Date:   Sat May 12 23:53:48 2018 -0700
+
+    refactor list view for rendering delay problem
+
+commit 2b72f9d69dce9f2e806908152d2d86984c852e7c
+Author: Wei2015 <wei.yao@sjsu.edu>
+Date:   Sat May 12 00:11:11 2018 -0700
+
+    implement part of order insertion, not yet searching
+
+commit 02b3f3a386b6d98214c438699325f99d6e7213a6
+Author: Wei2015 <wei.yao@sjsu.edu>
+Date:   Thu May 10 14:13:14 2018 -0700
+
+    add toolbar for customer list view and item view
+
+commit dd6501acf6eba284752bfee21aa44acd265a4c17
+Author: Wei2015 <wei.yao@sjsu.edu>
+Date:   Thu May 10 12:36:03 2018 -0700
+
+    change background for views
+
+commit bf9357fa7e4a82d06de094f3c4930cc3fb4f843f
+Author: Wei2015 <wei.yao@sjsu.edu>
+Date:   Wed May 9 23:55:11 2018 -0700
+
+    debug for list item loading, add onClick to trigger
+
+commit f079023d7f6baaf54c0943309f08c8ba2a544420
+Author: Wei2015 <wei.yao@sjsu.edu>
+Date:   Wed May 9 14:59:33 2018 -0700
+
+    add customer order activity and UI
+
+commit 8a327f6fe1163a055d29d766c38a336fd4b6436e
+Author: Wei2015 <wei.yao@sjsu.edu>
+Date:   Wed May 9 03:11:13 2018 -0700
+
+    add order activity for drawer layout
+
+commit 1ff42405e25f1e40d4bcde28df8ae8b0b66807a4
+Author: Wei2015 <wei.yao@sjsu.edu>
+Date:   Wed May 9 02:52:11 2018 -0700
+
+    create order object and store in firebase
+
+commit f051c76a74993852086ea7fef46c0571dad91dbf
+Author: Wei2015 <wei.yao@sjsu.edu>
+Date:   Tue May 8 23:15:13 2018 -0700
+
+    add login send welcome email
+
+commit bd6acfc9a6b7465b87e0204e625ce15cee03b125
+Author: Wei2015 <wei.yao@sjsu.edu>
+Date:   Tue May 8 20:29:55 2018 -0700
+
+    edit sort by name, ignore Upper and lower case
+
+commit 873928a0173036a637d6db96e9fdb5d2cdf9d521
+Author: Wei2015 <wei.yao@sjsu.edu>
+Date:   Mon May 7 20:14:19 2018 -0700
+
+    add total price in cart
+
+commit 142c9522ec6bd860052b56468811b2175ea61955
+Author: Wei2015 <wei.yao@sjsu.edu>
+Date:   Mon May 7 11:32:44 2018 -0700
+
+    add account UI
+
+commit 9e72a3eeefefb19b7ed9be0044c81869e97acca5
+Author: Wei2015 <wei.yao@sjsu.edu>
+Date:   Mon May 7 09:46:57 2018 -0700
+
+    implement cart view with item list display
+
+commit dbd1e5a9d36a822d2630d3e067412fa02a15ec66
+Author: Wei2015 <wei.yao@sjsu.edu>
+Date:   Mon May 7 03:01:18 2018 -0700
+
+    add cart item list adapter
+
+commit ca2e7a2e7323fe76fb245cec1dbb8ed6dbd20ab3
+Author: Wei2015 <wei.yao@sjsu.edu>
+Date:   Mon May 7 02:12:00 2018 -0700
+
+    remove toolbar in cart activity layout
+
+commit 7efc2001854fa29c062d026840da3f766a7d15ef
+Author: Wei2015 <wei.yao@sjsu.edu>
+Date:   Mon May 7 00:35:59 2018 -0700
+
+    some refactor
+
+commit 7ce8c9c9e592403051807b6711ca4f969997a58c
+Author: Wei2015 <wei.yao@sjsu.edu>
+Date:   Sun May 6 15:11:10 2018 -0700
+
+    add cart activity
+
+commit ce8680302ff7d72eb6df274a7dd0bcc0e516c973
+Author: Wei2015 <wei.yao@sjsu.edu>
+Date:   Sun May 6 00:58:58 2018 -0700
+
+    add delete item function in admin
+
+commit 5a36c0a5880db848e2a985476df99c666e1f43af
+Author: Wei2015 <wei.yao@sjsu.edu>
+Date:   Sat May 5 23:41:03 2018 -0700
+
+    add admin item list
+
+commit ba30c53aca8a6bf892b067c9348d0ffa82a994c2
+Author: Wei2015 <wei.yao@sjsu.edu>
+Date:   Sat May 5 20:39:15 2018 -0700
+
+    refactor some class names
+
+commit 26225f41844bdf02daa832d0088b76e9bfa227d7
+Author: Wei2015 <wei.yao@sjsu.edu>
+Date:   Tue Apr 24 23:14:52 2018 -0700
+
+    using firebase storage for photo upload
+
+commit d3025edb8a2cc6f34f1370ab4d15b6d955604879
+Author: Wei2015 <wei.yao@sjsu.edu>
+Date:   Tue Apr 24 17:23:11 2018 -0700
+
+    add admin auth
+
+commit fc2f493eb71ef80756f433d8fe5713f936f0008f
+Author: Wei2015 <wei.yao@sjsu.edu>
+Date:   Tue Apr 24 10:34:19 2018 -0700
+
+    add cart object
+
+commit 17787ce74d77e33164f2d03873452a3c50cbe97d
+Author: Wei2015 <wei.yao@sjsu.edu>
+Date:   Mon Apr 23 11:15:06 2018 -0700
+
+    add quantity input
+
+commit 1a0cc08f2f10645731b7b79b84ea5e716f2b7655
+Author: Wei2015 <wei.yao@sjsu.edu>
+Date:   Sun Apr 22 23:39:36 2018 -0700
+
+    add Constant.java to store constants
+
+commit 501ad4eeb42caa88626a1d71a2a934ed8078185e
+Author: Wei2015 <wei.yao@sjsu.edu>
+Date:   Sun Apr 22 23:33:45 2018 -0700
+
+    add single item view and activity
+
+commit 3db1ddf109f9ba285e7df5918e32e7a2736dc5e9
+Author: Wei2015 <wei.yao@sjsu.edu>
+Date:   Sun Apr 22 17:28:43 2018 -0700
+
+    custom list sorting implementation
+
+commit fca02fcc4f7056e8db2c9ac93384e6281878f01e
+Author: Wei2015 <wei.yao@sjsu.edu>
+Date:   Fri Apr 20 13:06:50 2018 -0700
+
+    Admin add new item implementation, with camera function
+
+commit f38f4f0c6df04fa439d3e0765640e6aa324a9cc4
+Author: Wei2015 <wei.yao@sjsu.edu>
+Date:   Mon Apr 16 13:47:29 2018 -0700
+
+    add item input validation helper class
+
+commit 3b49245e9f6609422e16cb38110ff85ca1f87054
+Author: Wei2015 <wei.yao@sjsu.edu>
+Date:   Mon Apr 16 10:50:41 2018 -0700
+
+    add item tab layout
+
+commit 18d9f8052a88c5c01d7d8a2e4d0f12a409ef993c
+Author: Wei2015 <wei.yao@sjsu.edu>
+Date:   Mon Apr 16 10:03:27 2018 -0700
+
+    modify admin main activity UI
+
+commit ea186d96f9c0020ac65552cc6915cf4c73882dbc
+Author: Wei2015 <wei.yao@sjsu.edu>
+Date:   Sun Apr 15 21:14:12 2018 -0700
+
+    modify Item class property type
+
+commit ea03ee0b52b1e9078a6bd50277d39351bf024c5f
+Author: Wei2015 <wei.yao@sjsu.edu>
+Date:   Sun Apr 15 21:04:45 2018 -0700
+
+    add item to database and retrieve with nodename
+
+commit 649101ccf3f47ca2911f9c5fd3a22540a80c2a8f
+Author: Wei2015 <wei.yao@sjsu.edu>
+Date:   Sat Apr 14 23:16:16 2018 -0700
+
+    add Gridview for category and onClickListener
+
+commit d09bfe1f7ba82ad4317088e8948b91bedaca4478
+Author: Wei2015 <wei.yao@sjsu.edu>
+Date:   Sat Apr 14 12:25:25 2018 -0700
+
+    add admin UI with tab view
+
+commit c82c6c7adaf0b76af84038bb305d85a4f3a3ef98
+Merge: 9a63c34 41264f8
+Author: Wei Yao <yaoweibio@gmail.com>
+Date:   Sat Apr 14 10:02:22 2018 -0700
+
+    Merge pull request #1 from Wei2015/wei
+    
+    Wei
+
+commit 41264f8b485a91da9dc664ed480d064d2508a9a4
+Author: Wei2015 <wei.yao@sjsu.edu>
+Date:   Sat Apr 14 09:59:44 2018 -0700
+
+    little modification on login UI
+
+commit 254d9453a1f7f5bd12161549b0d3d3bc00cba0f2
+Author: Wei2015 <wei.yao@sjsu.edu>
+Date:   Thu Apr 12 10:48:48 2018 -0700
+
+    test commit
+
+commit 9faf3edc0ff7fb7579e727f8b1f8b45cb1d2c851
+Author: Wei2015 <wei.yao@sjsu.edu>
+Date:   Thu Apr 12 10:33:42 2018 -0700
+
+    add misc
+
+commit f3f2916fa3b713cb91c5bfd15918105769fe171b
+Author: Wei2015 <wei.yao@sjsu.edu>
+Date:   Thu Apr 12 10:30:12 2018 -0700
+
+    Reverting to the state of the project at f484cef
+
+commit 9a63c3483d3d30634caaefeca6fc8db889b22153
+Merge: d0c5338 2266bda
+Author: Wei2015 <wei.yao@sjsu.edu>
+Date:   Thu Apr 12 09:56:12 2018 -0700
+
+    clean files
+    :erge branch 'master' of https://github.com/Wei2015/TakeoutOrderMS
+
+commit 2266bdae14d506cc91e70af2969c56e7c7bf9fb9
+Author: Wei Yao <yaoweibio@gmail.com>
+Date:   Thu Apr 12 09:55:57 2018 -0700
+
+    Delete proguard-rules.pro
+
+commit fc87d02b376a98ee45e245735621956a627d4727
+Author: Wei Yao <yaoweibio@gmail.com>
+Date:   Thu Apr 12 09:55:50 2018 -0700
+
+    Delete google-services.json
+
+commit 4f92c5d8de26d0c2f054457d71e3dc3d83c83915
+Author: Wei Yao <yaoweibio@gmail.com>
+Date:   Thu Apr 12 09:55:41 2018 -0700
+
+    Delete build.gradle
+
+commit d0c5338fc07b3f12b9d34533690dab86f5aab16e
+Author: Wei2015 <wei.yao@sjsu.edu>
+Date:   Thu Apr 12 09:55:17 2018 -0700
+
+    remove more files
+
+commit 9681e59c1389a32c14068f203c37ccafc95578d1
+Author: Wei Yao <yaoweibio@gmail.com>
+Date:   Thu Apr 12 09:53:48 2018 -0700
+
+    Delete modules.xml
+
+commit 3d1cd9b85393cda66dfb3da6a8cb815381920ec7
+Author: Wei Yao <yaoweibio@gmail.com>
+Date:   Thu Apr 12 09:53:40 2018 -0700
+
+    Delete vcs.xml
+
+commit 267aa8c812c423920ee8bdf6691c14c5c6fbac51
+Author: Wei Yao <yaoweibio@gmail.com>
+Date:   Thu Apr 12 09:53:32 2018 -0700
+
+    Delete misc.xml
+
+commit 9673b7f41eea8054454c95e5a8d13e1a3a3e4538
+Author: Wei Yao <yaoweibio@gmail.com>
+Date:   Thu Apr 12 09:49:47 2018 -0700
+
+    Delete gradle-wrapper.jar
+
+commit 48b58c5d478d875fa7783fbbe2c740818c93e0fc
+Author: Wei Yao <yaoweibio@gmail.com>
+Date:   Thu Apr 12 09:48:48 2018 -0700
+
+    Delete gradle-wrapper.properties
+
+commit bb134e232e4b44d99bfee76498286ef8904f5d05
+Author: Wei Yao <yaoweibio@gmail.com>
+Date:   Thu Apr 12 09:48:28 2018 -0700
+
+    Delete gradlew.bat
+
+commit 82a909867c2dd88fc9b3ccd1943d6b2f73f090a2
+Author: Wei Yao <yaoweibio@gmail.com>
+Date:   Thu Apr 12 09:48:18 2018 -0700
+
+    Delete settings.gradle
+
+commit 04012e3a352868f89665aa24b98d6a19d5b1cdf2
+Author: Wei Yao <yaoweibio@gmail.com>
+Date:   Thu Apr 12 09:48:10 2018 -0700
+
+    Delete gradlew
+
+commit 333e39cf8de7c19ee1ad94240d3faafb8bd5684b
+Author: Wei Yao <yaoweibio@gmail.com>
+Date:   Thu Apr 12 09:47:59 2018 -0700
+
+    Delete gradle.properties
+
+commit b99acb91aff98527f7c43b1946baa72f58693fe0
+Author: Wei Yao <yaoweibio@gmail.com>
+Date:   Thu Apr 12 09:47:46 2018 -0700
+
+    Delete build.gradle
+
+commit f484cef3d102cacb6f3e773118f7a77161a8538b
+Author: Wei2015 <wei.yao@sjsu.edu>
+Date:   Thu Apr 12 09:44:57 2018 -0700
+
+    fix customer google sign out
+
+commit 9cc87b8fa7f8016a14e4468b1ad6f60c037b8b10
+Author: Wei2015 <wei.yao@sjsu.edu>
+Date:   Wed Apr 11 23:47:42 2018 -0700
+
+    add list view and model classes
+
+commit 16197e5bc72e202e57f21f09f34f88434949a062
+Author: Wei2015 <wei.yao@sjsu.edu>
+Date:   Wed Apr 11 12:17:08 2018 -0700
+
+    add menu category UI
+
+commit a5d81ead0e0b16ada6fff79d618b21249ef07051
+Author: Wei2015 <wei.yao@sjsu.edu>
+Date:   Wed Apr 11 11:06:32 2018 -0700
+
+    remove GoogleApiClient
+
+commit 089fe852c560af94f48ab16efa8b09484eddba43
+Author: Wei2015 <wei.yao@sjsu.edu>
+Date:   Wed Apr 11 00:46:23 2018 -0700
+
+    add application subclass to add global access to GoogleApiClient
+
+commit 751d6b473016bfb94cbd4d9b1e89fe48544495bc
+Author: Wei2015 <wei.yao@sjsu.edu>
+Date:   Tue Apr 10 23:59:06 2018 -0700
+
+    add toolbar and navigation in customer_activity
+
+commit 8ee10264a46c2a7273d2c87b6feb07247953b11d
+Author: Wei2015 <wei.yao@sjsu.edu>
+Date:   Mon Apr 9 13:32:11 2018 -0700
+
+    test google sign in
+
+commit 1f6773a71b805b31e14b03b1efdd86252db5b134
+Author: Wei2015 <wei.yao@sjsu.edu>
+Date:   Mon Apr 9 10:22:50 2018 -0700
+
+    add gitignore file
+
+commit 3e8aea9c13d3fc32d5eb85c6d41cf9042c831c76
+Merge: 86d83a6 f9bdc9b
+Author: Wei2015 <wei.yao@sjsu.edu>
+Date:   Mon Apr 9 10:18:19 2018 -0700
+
+    initial
+    Merge https://github.com/Wei2015/TakeoutOrderMS
+
+commit 86d83a6140195fe290edb622e538bbf28ad4d1a8
+Merge: 51aac60 c45ad97
+Author: Wei2015 <wei.yao@sjsu.edu>
+Date:   Mon Apr 9 10:14:39 2018 -0700
+
+    Merge branch 'master' of https://github.com/Wei2015/TakeoutOrderMS
+    
+    ea
+
+commit f9bdc9b9e9a2c1e09ac18ed9147d2982f4a40adb
+Author: Wei Yao <yaoweibio@gmail.com>
+Date:   Mon Apr 9 10:12:34 2018 -0700
+
+    Delete .gitignore
+
+commit 51aac60d767979539f588f33ae3e027853c9e70f
+Author: Wei2015 <wei.yao@sjsu.edu>
+Date:   Mon Apr 9 10:06:20 2018 -0700
+
+    initial commit
+
+commit c45ad97bb55aed6d6a933f8cd590db5cdb87499e
+Author: Wei Yao <yaoweibio@gmail.com>
+Date:   Mon Apr 9 09:37:36 2018 -0700
+
+    Initial commit
